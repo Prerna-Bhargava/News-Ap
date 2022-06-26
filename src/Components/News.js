@@ -12,7 +12,7 @@ export default function News(props) {
 
   const fetchdata = async () => {
     setloading(true)
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&pageSize=24&page=${pageNo}&q=${props.searchKey}&apiKey=${process.env.REACT_APP_API_KEY}`
+    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&pageSize=24&page=${pageNo}&q=${props.searchKey}&apiKey=15c62c66419f47a8a9ba4bed5dceb4a7`
     let data = await fetch(url)
     let fetchedArticles = await data.json()
     setArticles(fetchedArticles.articles)
